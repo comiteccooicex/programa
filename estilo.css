@@ -1,0 +1,157 @@
+/* ======== BASE ======== */
+:root {
+  --rojo-ccoo: #e1251b;
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* ======== NAVBAR ======== */
+header, .navbar {
+  background-color: var(--rojo-ccoo);
+}
+.navbar-brand img { height: 2rem; }
+.nav-link {
+  color: #fff !important;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.nav-link:hover { opacity: .9; }
+
+/* ======== HERO ======== */
+.hero-text {
+  position: absolute;
+  top: 20rem;  
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  animation: fadeIn 1.2s ease;
+}
+.hero-text .fecha {
+  background: var(--rojo-ccoo);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: .9rem;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======== SECCIONES ======== */
+section { padding: 80px 0; }
+section:nth-child(even) { background: #f8f9fa; }
+h2, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
+
+/* ======== CANDIDATOS ======== */
+.candidatos { background: #fff; color: #fff; }
+.divider {
+  width: 80px;
+  height: 4px;
+  background: var(--rojo-ccoo);
+  margin: 0 auto 2rem;
+  border-radius: 4px;
+}
+.candidate-card {
+  background: #111;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: .3s;
+}
+.candidate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+.ribbon {
+  position: absolute;
+  top: 10px;
+  left: -8px;
+  background: var(--rojo-ccoo);
+  color: #fff;
+  padding: 4px 16px;
+  font-size: .8rem;
+  font-weight: 700;
+  transform: rotate(-45deg);
+}
+.candidate-name { color: var(--rojo-ccoo); }
+
+/* ======== PROGRAMA ======== */
+.program-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  color: var(--rojo-ccoo);
+}
+
+/* ======== modalProgram ======== */
+.program-item {
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+    .program-item:hover {
+      transform: translateY(-3px);
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .program-icon i {
+      color: #c00000;
+    }
+/* ======== OVERLAY CONTRASEÑA ======== */
+
+/* ======== OVERLAY CONTRASEÑA ======== */
+.pw-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  z-index: 9999;
+}
+.pw-card {
+  background: #fff;
+  color: #222;
+  padding: 2rem;
+  border-radius: .75rem;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+.pw-btn {
+  background: var(--rojo-ccoo);
+  color: #fff;
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+}
+.pw-btn:hover { filter: brightness(.95); }
+.pw-hidden { display: none !important; }
+
+/* ======== FOOTER ======== */
+footer {
+  background: var(--rojo-ccoo);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width:768px){
+  .hero { height: 60vh; background-size: cover; }
+  .program-item { flex-direction: column; text-align: center; }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>comiteICEX</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>  
+  <div id="pw-overlay" class="d-flex justify-content-center align-items-center position-fixed mt-5 start-0 w-100 h-100 p-3" style="background-color: rgba(0,0,0,1);" role="dialog" aria-modal="true" aria-labelledby="pw-title">
+    <div class="pw-card bg-white p-4 rounded shadow-sm w-100" style="max-width: 400px;">
+      <h2 id="pw-title" class="mb-3 text-center">Acceso restringido</h2>
+      <p class="mb-3 text-center">Introduce la contraseña para ver el sitio.</p>
+      <form id="pw-form" autocomplete="off">
+        <div class="mb-3">
+          <input id="pw-input" type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" required>
+        </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 mb-2">
+          <div class="form-check mb-2 mb-sm-0">
+            <input id="pw-remember" type="checkbox" class="form-check-input">
+            <label class="form-check-label" for="pw-remember">Recordar en esta sesión</label>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 w-sm-auto">Entrar</button>
+        </div>
+        <p id="pw-error" class="text-danger mt-2" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo1.png" alt="CCOO Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon bg-light rounded"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="programa.html">El Programa</a></li>
+            <li class="nav-item"><a class="nav-link" href="quienes.html">Quiénes Somos</a></li>            
+            <li class="nav-item"><a class="nav-link" href="#">Apoyadnos</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="">
+  <div class="container my-5"> <div class="row p-4 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg"> <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+    <h1 class="display-4 fw-bold lh-1 text-body-emphasis">29 octubre 2025 ¡VOTA!</h1>
+    <p class="lead"></p>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+      <a href="programa.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">EL PROGRAMA</a></div>
+  </div>
+  <div class="mx-auto col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+    <img class="img-fluid rounded-lg-3" src="img/banner.png" alt="" width="720">
+  </div>
+</div>
+</div>
+</section>
+  <section class="container my-5 py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>El poder de gritar contra la injusticia</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra magna non blandit tincidunt, est dui luctus urna, nec gravida nulla arcu sed justo.</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="img/manos.png" class="img-fluid rounded shadow" alt="Imagen">
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5 py-5 bg-light">
+    <div class="row align-items-center flex-md-row-reverse">
+      <div class="col-md-6">
+        <h2>El poder de luchar por lo que vale la pena</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac bibendum felis. Aenean dapibus erat id nunc dictum placerat.</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="img/punos.png" class="img-fluid rounded shadow" alt="Imagen">
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5 py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>El poder de unirnos para defender lo común</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer imperdiet ipsum id lectus porttitor, vel cursus arcu commodo.</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="img/manos.png" class="img-fluid rounded shadow" alt="Imagen">
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5 py-5 bg-light">
+    <div class="row align-items-center flex-md-row-reverse">
+      <div class="col-md-6">
+        <h2>El poder de apoyarnos y superar dificultades</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lorem nec nunc tincidunt laoreet at ut nulla.</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="img/manos.png" class="img-fluid rounded shadow" alt="Imagen">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="mb-0">&copy; 2025 CCOO - #CambiarLasCosas</p>
+  </footer>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const CORRECT_PASSWORD = "1234";
+  const overlay = document.getElementById('pw-overlay');
+  const form = document.getElementById('pw-form');
+  const input = document.getElementById('pw-input');
+  const remember = document.getElementById('pw-remember');
+  const errorEl = document.getElementById('pw-error');
+
+  if (sessionStorage.getItem('site_unlocked') === '1') {
+    overlay.classList.add('pw-hidden');
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+    return;
+  }
+
+  document.documentElement.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden';
+  input.focus();
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (input.value.trim() === CORRECT_PASSWORD) {
+      if (remember.checked) sessionStorage.setItem('site_unlocked', '1');
+      overlay.classList.add('pw-hidden');
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+    } else {
+      errorEl.textContent = 'Contraseña incorrecta. Inténtalo de nuevo.';
+      input.value = '';
+      input.focus();
+      overlay.animate([
+        { transform: 'translateX(0)' },
+        { transform: 'translateX(-6px)' },
+        { transform: 'translateX(6px)' },
+        { transform: 'translateX(0)' }
+      ], { duration: 300, easing: 'ease' });
+    }
+  });
+});
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
