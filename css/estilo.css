@@ -69,7 +69,7 @@ header, .navbar {
    SECCIONES
 =============================== */
 section:nth-child(even) { background: #f8f9fa; }
-
+section {padding-top: 2rem;}
 h2, h4, h5, .section-title {
   color: var(--rojo-ccoo);
   font-weight: 600;
