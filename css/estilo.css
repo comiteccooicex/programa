@@ -1,9 +1,12 @@
-/* ======== BASE ======== */
+/* ===============================
+   BASE GENERAL
+=============================== */
 :root {
   --rojo-ccoo: #e1251b;
 }
 
 * { box-sizing: border-box; }
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #333;
@@ -12,27 +15,33 @@ body {
 }
 
 .boton {
-  background-color: #e1251b !important;
+  background-color: var(--rojo-ccoo) !important;
   color: white !important;
 }
 
-
-/* ======== NAVBAR ======== */
+/* ===============================
+   NAVBAR
+=============================== */
 header, .navbar {
   background-color: var(--rojo-ccoo);
 }
+
 .navbar-brand img { height: 2.8rem; }
+
 .nav-link {
   color: #fff !important;
   text-transform: uppercase;
   font-weight: 500;
 }
+
 .nav-link:hover { opacity: .9; }
 
-/* ======== HERO ======== */
+/* ===============================
+   HERO
+=============================== */
 .hero-text {
   position: absolute;
-  top: 20rem;  
+  top: 20rem;
   background: rgba(0,0,0,0.6);
   color: #fff;
   padding: .5rem 1rem;
@@ -43,25 +52,38 @@ header, .navbar {
   gap: .5rem;
   animation: fadeIn 1.2s ease;
 }
+
 .hero-text .fecha {
   background: var(--rojo-ccoo);
   padding: 2px 8px;
   border-radius: 4px;
   font-size: .9rem;
 }
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ======== SECCIONES ======== */
+/* ===============================
+   SECCIONES
+=============================== */
 section { padding: 80px 0; }
 section:nth-child(even) { background: #f8f9fa; }
-h2, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
-h4, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
-h5, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
-/* ======== CANDIDATOS ======== */
-.candidatos { background: #fff; color: #fff; }
+
+h2, h4, h5, .section-title {
+  color: var(--rojo-ccoo);
+  font-weight: 600;
+}
+
+/* ===============================
+   CANDIDATOS (CARDS)
+=============================== */
+.candidatos {
+  background-color: #fff;
+  color: #212529;
+}
+
 .divider {
   width: 80px;
   height: 4px;
@@ -69,16 +91,52 @@ h5, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
   margin: 0 auto 2rem;
   border-radius: 4px;
 }
+
 .candidate-card {
-  background: #111;
-  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 12px;
   overflow: hidden;
-  transition: .3s;
+  transition: all 0.3s ease;
+  background: #111;
+  height: 100%;
 }
+
 .candidate-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
+
+.card-img-top {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.card-body {
+  background-color: #f8f9fa;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0.75rem;
+  min-height: 80px;
+}
+
+.candidate-name {
+  font-weight: 600;
+  color: var(--rojo-ccoo);
+  font-size: 0.95rem;
+}
+
+.candidate-role {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Cinta “CCOO” */
 .ribbon {
   position: absolute;
   top: 10px;
@@ -89,10 +147,13 @@ h5, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
   font-size: .8rem;
   font-weight: 700;
   transform: rotate(-45deg);
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
-.candidate-name { color: var(--rojo-ccoo); }
 
-/* ======== PROGRAMA ======== */
+/* ===============================
+   PROGRAMA
+=============================== */
 .program-icon {
   width: 70px;
   height: 70px;
@@ -105,23 +166,25 @@ h5, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
   color: var(--rojo-ccoo);
 }
 
-/* ======== modalProgram ======== */
 .program-item {
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-    }
-    .program-item:hover {
-      transform: translateY(-3px);
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    .program-icon i {
-      color: #c00000;
-    }
-/* ======== OVERLAY CONTRASEÑA ======== */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
 
-/* ======== OVERLAY CONTRASEÑA ======== */
+.program-item:hover {
+  transform: translateY(-3px);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.program-icon i {
+  color: #c00000;
+}
+
+/* ===============================
+   OVERLAY CONTRASEÑA
+=============================== */
 .pw-overlay {
   position: fixed;
   inset: 0;
@@ -131,6 +194,7 @@ h5, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
   background: #000;
   z-index: 9999;
 }
+
 .pw-card {
   background: #fff;
   color: #222;
@@ -139,6 +203,7 @@ h5, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
   text-align: center;
   box-shadow: 0 12px 30px rgba(0,0,0,0.5);
 }
+
 .pw-btn {
   background: var(--rojo-ccoo);
   color: #fff;
@@ -146,10 +211,14 @@ h5, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
   padding: .5rem 1rem;
   border-radius: .5rem;
 }
+
 .pw-btn:hover { filter: brightness(.95); }
+
 .pw-hidden { display: none !important; }
 
-/* ======== FOOTER ======== */
+/* ===============================
+   FOOTER
+=============================== */
 footer {
   background: var(--rojo-ccoo);
   color: #fff;
@@ -157,8 +226,10 @@ footer {
   padding: 1rem 0;
 }
 
-/* ======== RESPONSIVE ======== */
-@media (max-width:768px){
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 768px) {
   .hero { height: 60vh; background-size: cover; }
   .program-item { flex-direction: column; text-align: center; }
 }
