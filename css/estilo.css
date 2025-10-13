@@ -68,7 +68,6 @@ header, .navbar {
 /* ===============================
    SECCIONES
 =============================== */
-section { padding: 80px 0; }
 section:nth-child(even) { background: #f8f9fa; }
 
 h2, h4, h5, .section-title {
