@@ -1,12 +1,9 @@
-/* ===============================
-   BASE GENERAL
-=============================== */
+/* ======== BASE ======== */
 :root {
   --rojo-ccoo: #e1251b;
 }
 
 * { box-sizing: border-box; }
-
 body {
   font-family: 'Poppins', sans-serif;
   color: #333;
@@ -15,33 +12,95 @@ body {
 }
 
 .boton {
-  background-color: var(--rojo-ccoo) !important;
+  background-color: #e1251b !important;
   color: white !important;
 }
 
-/* ===============================
-   NAVBAR
-=============================== */
+/* contadores */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #212529, #343a40);
+}
+
+.stat-card {
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.counter {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+/* Banner general */
+.banner-box {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+/* Imagen perfectamente encuadrada */
+.img-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 250px; /* asegura proporción mínima */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* encuadra la imagen */
+  object-position: center; /* centra el contenido */
+  transition: transform 0.4s ease;
+}
+
+.img-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 767.98px) {
+  .banner-box {
+    padding: 2rem 1rem;
+    margin: 0.5rem;
+  }
+
+  .img-wrapper {
+    min-height: 200px;
+  }
+}
+
+/* ======== NAVBAR ======== */
 header, .navbar {
   background-color: var(--rojo-ccoo);
 }
-
 .navbar-brand img { height: 2.8rem; }
-
 .nav-link {
   color: #fff !important;
   text-transform: uppercase;
   font-weight: 500;
 }
-
 .nav-link:hover { opacity: .9; }
 
-/* ===============================
-   HERO
-=============================== */
+/* ======== HERO ======== */
 .hero-text {
   position: absolute;
-  top: 20rem;
+  top: 20rem;  
   background: rgba(0,0,0,0.6);
   color: #fff;
   padding: .5rem 1rem;
@@ -52,37 +111,73 @@ header, .navbar {
   gap: .5rem;
   animation: fadeIn 1.2s ease;
 }
-
 .hero-text .fecha {
   background: var(--rojo-ccoo);
   padding: 2px 8px;
   border-radius: 4px;
   font-size: .9rem;
 }
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===============================
-   SECCIONES
-=============================== */
+ .votar-section {
+      background: #ffffff;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      padding: 3rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .votar-section h2 {
+      font-weight: 700;
+      color: #b00020; /* rojo institucional */
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .votar-section p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .votar-section p strong {
+      color: #b00020;
+      font-weight: 600;
+    }
+
+    .votar-section .card {
+      border: none;
+      background-color: #fdfdfd;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-radius: 1rem;
+    }
+
+    .votar-section .highlight {
+      background: #fff3f3;
+      border-left: 5px solid #b00020;
+      padding: 1rem 1.25rem;
+      border-radius: 0.75rem;
+      margin: 1.25rem 0;
+    }
+
+    @media (min-width: 768px) {
+      .votar-section {
+        padding: 4rem 5rem;
+      }
+    }
+
+
+/* ======== SECCIONES ======== */
+section { padding: 80px 0; }
 section:nth-child(even) { background: #f8f9fa; }
-section {padding-top: 2rem;}
-h2, h4, h5, .section-title {
-  color: var(--rojo-ccoo);
-  font-weight: 600;
-}
-
-/* ===============================
-   CANDIDATOS (CARDS)
-=============================== */
-.candidatos {
-  background-color: #fff;
-  color: #212529;
-}
-
+h2, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
+h4, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
+h5, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
+/* ======== CANDIDATOS ======== */
+.candidatos { background: #fff; color: #fff; }
 .divider {
   width: 80px;
   height: 4px;
@@ -90,69 +185,43 @@ h2, h4, h5, .section-title {
   margin: 0 auto 2rem;
   border-radius: 4px;
 }
-
 .candidate-card {
-  display: flex;
-  flex-direction: column;
-  border: none;
-  border-radius: 12px;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   overflow: hidden;
-  transition: all 0.3s ease;
-  background: #111;
-  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .candidate-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
-
-.card-img-top {
+.candidate-card img {
   width: 100%;
-  height: 240px;
+  height: 300px;
   object-fit: cover;
-  border-bottom: 1px solid #eee;
 }
-
 .card-body {
-  background-color: #f8f9fa;
+  padding: 1rem;
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0.75rem;
-  min-height: 80px;
 }
-
-.candidate-name {
-  font-weight: 600;
-  color: var(--rojo-ccoo);
-  font-size: 0.95rem;
-}
-
-.candidate-role {
-  font-size: 0.85rem;
-  color: #666;
-}
-
-/* Cinta “CCOO” */
 .ribbon {
   position: absolute;
   top: 10px;
-  left: -8px;
-  background: var(--rojo-ccoo);
+  left: 10px;
+  background: #e1251b;
   color: #fff;
-  padding: 4px 16px;
-  font-size: .8rem;
-  font-weight: 700;
-  transform: rotate(-45deg);
-  border-radius: 3px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
 }
+.highlight {
+  color: var(--bs-card-color);
+}
+.candidate-name { color: var(--rojo-ccoo); }
 
-/* ===============================
-   PROGRAMA
-=============================== */
+/* ======== PROGRAMA ======== */
 .program-icon {
   width: 70px;
   height: 70px;
@@ -165,25 +234,23 @@ h2, h4, h5, .section-title {
   color: var(--rojo-ccoo);
 }
 
+/* ======== modalProgram ======== */
 .program-item {
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+    .program-item:hover {
+      transform: translateY(-3px);
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .program-icon i {
+      color: #c00000;
+    }
+/* ======== OVERLAY CONTRASEÑA ======== */
 
-.program-item:hover {
-  transform: translateY(-3px);
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.program-icon i {
-  color: #c00000;
-}
-
-/* ===============================
-   OVERLAY CONTRASEÑA
-=============================== */
+/* ======== OVERLAY CONTRASEÑA ======== */
 .pw-overlay {
   position: fixed;
   inset: 0;
@@ -193,7 +260,6 @@ h2, h4, h5, .section-title {
   background: #000;
   z-index: 9999;
 }
-
 .pw-card {
   background: #fff;
   color: #222;
@@ -202,7 +268,6 @@ h2, h4, h5, .section-title {
   text-align: center;
   box-shadow: 0 12px 30px rgba(0,0,0,0.5);
 }
-
 .pw-btn {
   background: var(--rojo-ccoo);
   color: #fff;
@@ -210,14 +275,10 @@ h2, h4, h5, .section-title {
   padding: .5rem 1rem;
   border-radius: .5rem;
 }
-
 .pw-btn:hover { filter: brightness(.95); }
-
 .pw-hidden { display: none !important; }
 
-/* ===============================
-   FOOTER
-=============================== */
+/* ======== FOOTER ======== */
 footer {
   background: var(--rojo-ccoo);
   color: #fff;
@@ -225,10 +286,8 @@ footer {
   padding: 1rem 0;
 }
 
-/* ===============================
-   RESPONSIVE
-=============================== */
-@media (max-width: 768px) {
+/* ======== RESPONSIVE ======== */
+@media (max-width:768px){
   .hero { height: 60vh; background-size: cover; }
   .program-item { flex-direction: column; text-align: center; }
 }
