@@ -1,28 +1,135 @@
-/* ======== BASE ======== */
+/* =========================================
+   BASE
+========================================= */
 :root {
   --rojo-ccoo: #e1251b;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #333;
-  background-color: #fff;
+  background-color: #f8f9fa;
   scroll-behavior: smooth;
 }
 
-.boton {
-  background-color: #e1251b !important;
-  color: white !important;
+.boton,
+.btn-rojo {
+  background-color: var(--rojo-ccoo) !important;
+  color: #fff !important;
 }
 
-/* contadores */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
+/* =========================================
+   NAVBAR
+========================================= */
+header,
+.navbar {
+  background-color: var(--rojo-ccoo);
 }
 
+.navbar-brand img {
+  height: 2.8rem;
+}
+
+.nav-link {
+  color: #fff !important;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  opacity: 0.9;
+}
+
+/* =========================================
+   HERO
+========================================= */
+.hero-text {
+  position: absolute;
+  top: 20rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeIn 1.2s ease;
+}
+
+.hero-text .fecha {
+  background: var(--rojo-ccoo);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   SECCIONES GENERALES
+========================================= */
+section {
+  padding: 80px 0;
+}
+
+section:nth-child(even) {
+  background: #f8f9fa;
+}
+
+h2,
+h4,
+h5,
+.section-title {
+  color: var(--rojo-ccoo);
+  font-weight: 600;
+}
+
+/* =========================================
+   BANNER
+========================================= */
+.banner-box {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.img-wrapper {
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.img-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================================
+   CONTADORES / TARJETAS
+========================================= */
 header {
   background: linear-gradient(135deg, #212529, #343a40);
 }
@@ -34,7 +141,7 @@ header {
 
 .stat-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .counter {
@@ -44,140 +151,57 @@ header {
   margin-bottom: 0.5rem;
 }
 
-/* Banner general */
-.banner-box {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+/* =========================================
+   SECCIÓN VOTAR
+========================================= */
+.votar-section {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
+  margin-top: 4rem;
 }
 
-/* Imagen perfectamente encuadrada */
-.img-wrapper {
-  width: 100%;
-  height: 100%;
-  min-height: 250px; /* asegura proporción mínima */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+.votar-section h2 {
+  font-weight: 700;
+  color: var(--rojo-ccoo);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.votar-section p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.votar-section p strong {
+  color: var(--rojo-ccoo);
+  font-weight: 600;
+}
+
+.votar-section .card {
+  border: none;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border-radius: 1rem;
 }
 
-.img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* encuadra la imagen */
-  object-position: center; /* centra el contenido */
-  transition: transform 0.4s ease;
+.votar-section .highlight {
+  background: #fff3f3;
+  border-left: 5px solid #b00020;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  margin: 1.25rem 0;
 }
 
-.img-wrapper img:hover {
-  transform: scale(1.05);
+/* =========================================
+   CANDIDATOS
+========================================= */
+.candidatos {
+  background: #fff;
 }
 
-/* Ajustes responsivos */
-@media (max-width: 767.98px) {
-  .banner-box {
-    padding: 2rem 1rem;
-    margin: 0.5rem;
-  }
-
-  .img-wrapper {
-    min-height: 200px;
-  }
-}
-
-/* ======== NAVBAR ======== */
-header, .navbar {
-  background-color: var(--rojo-ccoo);
-}
-.navbar-brand img { height: 2.8rem; }
-.nav-link {
-  color: #fff !important;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.nav-link:hover { opacity: .9; }
-
-/* ======== HERO ======== */
-.hero-text {
-  position: absolute;
-  top: 20rem;  
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: .5rem 1rem;
-  border-radius: .5rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  animation: fadeIn 1.2s ease;
-}
-.hero-text .fecha {
-  background: var(--rojo-ccoo);
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: .9rem;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
- .votar-section {
-      background: #ffffff;
-      border-radius: 1.5rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-      padding: 3rem 2rem;
-      margin-top: 4rem;
-    }
-
-    .votar-section h2 {
-      font-weight: 700;
-      color: #b00020; /* rojo institucional */
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .votar-section p {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-
-    .votar-section p strong {
-      color: #b00020;
-      font-weight: 600;
-    }
-
-    .votar-section .card {
-      border: none;
-      background-color: #fdfdfd;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      border-radius: 1rem;
-    }
-
-    .votar-section .highlight {
-      background: #fff3f3;
-      border-left: 5px solid #b00020;
-      padding: 1rem 1.25rem;
-      border-radius: 0.75rem;
-      margin: 1.25rem 0;
-    }
-
-    @media (min-width: 768px) {
-      .votar-section {
-        padding: 4rem 5rem;
-      }
-    }
-
-
-/* ======== SECCIONES ======== */
-section { padding: 80px 0; }
-section:nth-child(even) { background: #f8f9fa; }
-h2, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
-h4, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
-h5, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
-/* ======== CANDIDATOS ======== */
-.candidatos { background: #fff; color: #fff; }
 .divider {
   width: 80px;
   height: 4px;
@@ -185,72 +209,76 @@ h5, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
   margin: 0 auto 2rem;
   border-radius: 4px;
 }
+
 .candidate-card {
   background: #fff;
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .candidate-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
+
 .candidate-card img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
-.card-body {
-  padding: 1rem;
-  flex-grow: 1;
+
+.candidate-name {
+  color: var(--rojo-ccoo);
 }
+
 .ribbon {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: #e1251b;
+  background: var(--rojo-ccoo);
   color: #fff;
   font-size: 0.75rem;
   font-weight: bold;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
 }
-.highlight {
-  color: var(--bs-card-color);
-}
-.candidate-name { color: var(--rojo-ccoo); }
 
-/* ======== PROGRAMA ======== */
+/* =========================================
+   PROGRAMA
+========================================= */
+.program-item {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.program-item:hover {
+  transform: translateY(-3px);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 .program-icon {
   width: 70px;
   height: 70px;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   color: var(--rojo-ccoo);
 }
 
-/* ======== modalProgram ======== */
-.program-item {
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-    }
-    .program-item:hover {
-      transform: translateY(-3px);
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    .program-icon i {
-      color: #c00000;
-    }
-/* ======== OVERLAY CONTRASEÑA ======== */
+.program-icon i {
+  color: #c00000;
+}
 
-/* ======== OVERLAY CONTRASEÑA ======== */
+/* =========================================
+   OVERLAY CONTRASEÑA
+========================================= */
 .pw-overlay {
   position: fixed;
   inset: 0;
@@ -260,25 +288,35 @@ h5, .section-title { color: var(--rojo-ccoo); font-weight: 600; }
   background: #000;
   z-index: 9999;
 }
+
 .pw-card {
   background: #fff;
   color: #222;
   padding: 2rem;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   text-align: center;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
 }
+
 .pw-btn {
   background: var(--rojo-ccoo);
   color: #fff;
   border: none;
-  padding: .5rem 1rem;
-  border-radius: .5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
-.pw-btn:hover { filter: brightness(.95); }
-.pw-hidden { display: none !important; }
 
-/* ======== FOOTER ======== */
+.pw-btn:hover {
+  filter: brightness(0.95);
+}
+
+.pw-hidden {
+  display: none !important;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
 footer {
   background: var(--rojo-ccoo);
   color: #fff;
@@ -286,8 +324,36 @@ footer {
   padding: 1rem 0;
 }
 
-/* ======== RESPONSIVE ======== */
-@media (max-width:768px){
-  .hero { height: 60vh; background-size: cover; }
-  .program-item { flex-direction: column; text-align: center; }
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 767.98px) {
+  .banner-box {
+    padding: 2rem 1rem;
+    margin: 0.5rem;
+  }
+
+  .img-wrapper {
+    min-height: 200px;
+  }
+
+  .hero {
+    height: 60vh;
+    background-size: cover;
+  }
+
+  .program-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .votar-section {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .votar-section {
+    padding: 4rem 5rem;
+  }
 }
