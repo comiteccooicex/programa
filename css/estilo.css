@@ -352,9 +352,54 @@ footer {
     padding: 2rem 1.5rem;
   }
 }
-
 @media (min-width: 768px) {
   .votar-section {
     padding: 4rem 5rem;
   }
 }
+/* ======== ZOOM DE IMAGEN ======== */
+.zoomable {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.zoomable:hover {
+  transform: scale(1.02);
+}
+
+.zoom-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1055; /* sobre modales bootstrap */
+}
+
+.zoom-modal-content {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.zoom-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Habilita pinch-to-zoom en móviles */
+@media (pointer: coarse) {
+  .zoom-modal-content {
+    touch-action: pinch-zoom;
+  }
+}
+
