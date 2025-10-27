@@ -3,7 +3,6 @@
 ========================================= */
 :root {
   --rojo-ccoo: #e1251b;
-  --bs-primary: #e1251b; /* sincroniza con Bootstrap */
 }
 
 * {
@@ -12,29 +11,15 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: var(--rojo-ccoo);
+  color: #333;
   background-color: #f8f9fa;
   scroll-behavior: smooth;
 }
 
-/* Aplicar rojo a textos generales */
-h1, h2, h3, h4, h5, h6,
-p, a, li, span, label, strong, small, .section-title {
-  color: var(--rojo-ccoo) !important;
-}
-
-/* Botones */
 .boton,
-.btn-rojo,
-.btn-primary {
+.btn-rojo {
   background-color: var(--rojo-ccoo) !important;
   color: #fff !important;
-  border: none;
-}
-
-.btn-rojo:hover,
-.btn-primary:hover {
-  filter: brightness(0.9);
 }
 
 /* =========================================
@@ -81,7 +66,6 @@ header,
   padding: 2px 8px;
   border-radius: 4px;
   font-size: 0.9rem;
-  color: #fff;
 }
 
 @keyframes fadeIn {
@@ -103,7 +87,15 @@ section {
 }
 
 section:nth-child(even) {
-  background: #fff;
+  background: #f8f9fa;
+}
+
+h2,
+h4,
+h5,
+.section-title {
+  color: var(--rojo-ccoo);
+  font-weight: 600;
 }
 
 /* =========================================
@@ -138,9 +130,12 @@ section:nth-child(even) {
 /* =========================================
    CONTADORES / TARJETAS
 ========================================= */
+header {
+  background: linear-gradient(135deg, #212529, #343a40);
+}
+
 .stat-card {
   background-color: #fff;
-  color: var(--rojo-ccoo);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -152,6 +147,7 @@ section:nth-child(even) {
 .counter {
   font-size: 2.5rem;
   font-weight: 700;
+  color: #000;
   margin-bottom: 0.5rem;
 }
 
@@ -164,11 +160,11 @@ section:nth-child(even) {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   padding: 3rem 2rem;
   margin-top: 4rem;
-  color: var(--rojo-ccoo);
 }
 
 .votar-section h2 {
   font-weight: 700;
+  color: var(--rojo-ccoo);
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -180,19 +176,20 @@ section:nth-child(even) {
 }
 
 .votar-section p strong {
+  color: var(--rojo-ccoo);
   font-weight: 600;
 }
 
 .votar-section .card {
   border: none;
-  background-color: #fff;
+  background-color: #fdfdfd;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border-radius: 1rem;
 }
 
 .votar-section .highlight {
   background: #fff3f3;
-  border-left: 5px solid var(--rojo-ccoo);
+  border-left: 5px solid #b00020;
   padding: 1rem 1.25rem;
   border-radius: 0.75rem;
   margin: 1.25rem 0;
@@ -201,6 +198,10 @@ section:nth-child(even) {
 /* =========================================
    CANDIDATOS
 ========================================= */
+.candidatos {
+  background: #fff;
+}
+
 .divider {
   width: 80px;
   height: 4px;
@@ -215,7 +216,6 @@ section:nth-child(even) {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: var(--rojo-ccoo);
 }
 
 .candidate-card:hover {
@@ -230,7 +230,7 @@ section:nth-child(even) {
 }
 
 .candidate-name {
-  font-weight: 600;
+  color: var(--rojo-ccoo);
 }
 
 .ribbon {
@@ -251,7 +251,6 @@ section:nth-child(even) {
 .program-item {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  color: var(--rojo-ccoo);
 }
 
 .program-item:hover {
@@ -274,7 +273,7 @@ section:nth-child(even) {
 }
 
 .program-icon i {
-  color: var(--rojo-ccoo);
+  color: #c00000;
 }
 
 /* =========================================
@@ -292,7 +291,7 @@ section:nth-child(even) {
 
 .pw-card {
   background: #fff;
-  color: var(--rojo-ccoo);
+  color: #222;
   padding: 2rem;
   border-radius: 0.75rem;
   text-align: center;
@@ -352,6 +351,7 @@ footer {
     padding: 2rem 1.5rem;
   }
 }
+
 @media (min-width: 768px) {
   .votar-section {
     padding: 4rem 5rem;
@@ -402,4 +402,3 @@ footer {
     touch-action: pinch-zoom;
   }
 }
-
