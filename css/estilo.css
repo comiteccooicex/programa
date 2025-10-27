@@ -3,6 +3,7 @@
 ========================================= */
 :root {
   --rojo-ccoo: #e1251b;
+  --bs-primary: #e1251b; /* sincroniza con Bootstrap */
 }
 
 * {
@@ -11,15 +12,29 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: #333;
+  color: var(--rojo-ccoo);
   background-color: #f8f9fa;
   scroll-behavior: smooth;
 }
 
+/* Aplicar rojo a textos generales */
+h1, h2, h3, h4, h5, h6,
+p, a, li, span, label, strong, small, .section-title {
+  color: var(--rojo-ccoo) !important;
+}
+
+/* Botones */
 .boton,
-.btn-rojo {
+.btn-rojo,
+.btn-primary {
   background-color: var(--rojo-ccoo) !important;
   color: #fff !important;
+  border: none;
+}
+
+.btn-rojo:hover,
+.btn-primary:hover {
+  filter: brightness(0.9);
 }
 
 /* =========================================
@@ -66,6 +81,7 @@ header,
   padding: 2px 8px;
   border-radius: 4px;
   font-size: 0.9rem;
+  color: #fff;
 }
 
 @keyframes fadeIn {
@@ -87,15 +103,7 @@ section {
 }
 
 section:nth-child(even) {
-  background: #f8f9fa;
-}
-
-h2,
-h4,
-h5,
-.section-title {
-  color: var(--rojo-ccoo);
-  font-weight: 600;
+  background: #fff;
 }
 
 /* =========================================
@@ -130,12 +138,9 @@ h5,
 /* =========================================
    CONTADORES / TARJETAS
 ========================================= */
-header {
-  background: linear-gradient(135deg, #212529, #343a40);
-}
-
 .stat-card {
   background-color: #fff;
+  color: var(--rojo-ccoo);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -147,7 +152,6 @@ header {
 .counter {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #000;
   margin-bottom: 0.5rem;
 }
 
@@ -160,11 +164,11 @@ header {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   padding: 3rem 2rem;
   margin-top: 4rem;
+  color: var(--rojo-ccoo);
 }
 
 .votar-section h2 {
   font-weight: 700;
-  color: var(--rojo-ccoo);
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -176,20 +180,19 @@ header {
 }
 
 .votar-section p strong {
-  color: var(--rojo-ccoo);
   font-weight: 600;
 }
 
 .votar-section .card {
   border: none;
-  background-color: #fdfdfd;
+  background-color: #fff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border-radius: 1rem;
 }
 
 .votar-section .highlight {
   background: #fff3f3;
-  border-left: 5px solid #b00020;
+  border-left: 5px solid var(--rojo-ccoo);
   padding: 1rem 1.25rem;
   border-radius: 0.75rem;
   margin: 1.25rem 0;
@@ -198,10 +201,6 @@ header {
 /* =========================================
    CANDIDATOS
 ========================================= */
-.candidatos {
-  background: #fff;
-}
-
 .divider {
   width: 80px;
   height: 4px;
@@ -216,6 +215,7 @@ header {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--rojo-ccoo);
 }
 
 .candidate-card:hover {
@@ -230,7 +230,7 @@ header {
 }
 
 .candidate-name {
-  color: var(--rojo-ccoo);
+  font-weight: 600;
 }
 
 .ribbon {
@@ -251,6 +251,7 @@ header {
 .program-item {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  color: var(--rojo-ccoo);
 }
 
 .program-item:hover {
@@ -273,7 +274,7 @@ header {
 }
 
 .program-icon i {
-  color: #c00000;
+  color: var(--rojo-ccoo);
 }
 
 /* =========================================
@@ -291,7 +292,7 @@ header {
 
 .pw-card {
   background: #fff;
-  color: #222;
+  color: var(--rojo-ccoo);
   padding: 2rem;
   border-radius: 0.75rem;
   text-align: center;
